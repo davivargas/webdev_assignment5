@@ -1,0 +1,456 @@
+@font-face {
+    font-family: Inter;
+    src: url("../fonts/Inter-VariableFont_opsz,wght.ttf");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("../fonts/Inter-Italic-VariableFont_opsz,wght.ttf");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #2569fc;
+}
+
+a:hover {
+    color: rgb(149, 168, 36);
+}
+
+#grid-container {
+    display: grid;
+}
+
+#logo-container {
+    grid-area: logo;
+    margin: 0;
+    padding: 0;
+}
+
+#logo-container img {
+    border-radius: 50%;
+    max-width: 155px;
+    margin: 0 auto 1.5em auto;
+    display: block;
+}
+
+#navbar {
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-style: italic;
+    color: #2569fc;
+}
+
+.navbar-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-item p {
+    margin-top: 5px;
+    font-size: 14pt;
+}
+
+.navbar-item img {
+    max-width: 40px;
+}
+
+#navbar2 {
+    grid-area: navbar2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#navbar2 button {
+    background-color: #2569fc49;
+    border: none;
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12pt;
+    color: #2569fc;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#sidebar section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.7em;
+}
+
+#sidebar section h3 {
+    font-size: 13pt;
+    margin: 1em 0em 0em 0em;
+    font-weight: 500;
+    border-bottom: 2px dashed #2569fc49;
+}
+
+#sidebar section p {
+    font-size: 10pt;
+    margin-bottom: 0.7em;
+}
+
+#sidebar section a {
+    border: 2px solid rgba(128, 128, 128, 0.24);
+    border-radius: 7px;
+    margin: 0.3em auto 0 0;
+    padding: 2px 5px;
+    font-size: 12pt;
+    font-style: italic;
+}
+
+#sidebar section a i {
+    font-size: 14pt;
+}
+
+#banner {
+    grid-area: banner;
+    width: 100%;
+    margin: 0;
+}
+
+#banner-fig {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#banner img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+#banner-figcap {
+    position: absolute;
+    bottom: 10%;
+}
+
+#banner-figcap p {
+    font-style: italic;
+}
+
+#b-figcap1 {
+    margin: 0 40% 0 0;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+#b-figcap2 {
+    margin: 0;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 14pt;
+    font-weight: 200;
+}
+
+#subscribe-form {
+    grid-area: subscribe-form;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.6fr;
+    align-items: center;
+    margin: 1em 0;
+}
+
+#subscribe-form p {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#subscribe-form img {
+    margin-left: 3vh;
+    max-width: 60px;
+}
+
+#subscribe-form input {
+    width: 60%;
+    border-radius: 3px;
+    border: 2px solid black;
+}
+
+#articles {
+    grid-area: articles;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    align-items: start;
+}
+
+#articles figure {
+    width: auto;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+}
+
+#articles img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#articles a {
+    margin-top: 0.5em;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+.date-posted {
+    margin: 0;
+    padding: 0;
+    font-size: 8pt;
+    font-style: italic;
+    color: rgba(128, 128, 128, 0.637);
+}
+
+#article1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#article2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#article3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#article4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#footer {
+    margin-top: 2em;
+    border-top: 3px dashed #2569fc49;
+    grid-area: footer;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer a:hover {
+    color: red;
+}
+
+#footer-info {
+    font-size: 8pt;
+}
+
+#footer-icons a {
+    color: gray;
+    font-size: 20pt;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+    #grid-container {
+        min-height: 180vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.07fr 0.15fr 0.2fr 0.15fr auto auto;
+        grid-template-areas:
+            "navbar"
+            "logo"
+            "banner"
+            "subscribe-form"
+            "articles"
+            "footer";
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #navbar2 {
+        display: none;
+    }
+
+    #navbar {
+        margin-bottom: 0.5em;
+        border-bottom: 2px solid #c2c2c2;
+    }
+
+    .navbar-item {
+        margin-top: 0.7em;
+    }
+
+    .navbar-item img {
+        display: none;
+    }
+
+    .navbar-item p {
+        font-size: 14pt;
+    }
+
+    #banner-figcap {
+        bottom: 0%;
+        width: 100%;
+    }
+
+    #b-figcap1 {
+        margin: 0;
+        padding: 0.3em;
+        font-size: 14pt;
+    }
+
+    #b-figcap2 {
+        margin: 0;
+        padding: 0.7em;
+        font-size: 10pt;
+    }
+
+    #subscribe-form {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "mail description"
+            "form form";
+    }
+
+    #mail-icon {
+        grid-area: mail;
+    }
+
+    #subscribe-p {
+        grid-area: description;
+        margin: 0;
+    }
+
+    #form {
+        grid-area: form;
+        margin: 1em 0 1.5em 5%;
+    }
+
+    #articles {
+        grid-template-columns: 1fr;
+    }
+
+    #articles a, p {
+        padding: 0 1vh;
+    }
+
+    .date-posted {
+        padding: 0 1vh;
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1280px) {
+    body {
+        margin: 0.4em;
+        padding: 0.4em;
+    }
+
+    #grid-container {
+        grid-template-columns: 0.15fr repeat(4, 1fr) 0.15fr;
+        grid-template-rows: 0.2fr 1fr 35px 0.25fr auto 0.2fr;
+        grid-template-areas:
+            ". logo navbar navbar navbar ."
+            ". banner banner banner banner ."
+            ". navbar2 navbar2 navbar2 navbar2 ."
+            ". subscribe-form subscribe-form subscribe-form subscribe-form ."
+            ". articles articles articles articles ."
+            ". footer footer footer footer .";
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #navbar {
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+    body {
+        margin: 1.6em;
+        padding: 1.6em;
+    }
+
+    #grid-container {
+        min-height: 100vh;
+        grid-template-columns: 0.2fr repeat(5, 1fr) 0.2fr;
+        grid-template-rows: 0.1fr 0.3fr 35px 0.1fr 0.3fr 0.1fr;
+        grid-template-areas:
+            ". logo banner banner banner banner ."
+            ". navbar banner banner banner banner ."
+            ". sidebar navbar2 navbar2 navbar2 navbar2 ."
+            ". sidebar subscribe-form subscribe-form subscribe-form subscribe-form ."
+            ". sidebar articles articles articles articles ."
+            ". footer footer footer footer footer .";
+    }
+
+    #logo-container img {
+        margin: 0;
+    }
+
+    #navbar {
+        margin-top: 3em;
+        margin-bottom: 4em;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 0.3em;
+    }
+
+    .navbar-item p {
+        margin: 0;
+    }
+
+    .navbar-item img {
+        margin-right: 1.2em;
+    }
+
+    #banner {
+        width: 100%;
+        margin: 0;
+    }
+
+    #banner-fig {
+        height: 100%;
+    }
+
+    #banner img {
+        height: 100%;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+}
