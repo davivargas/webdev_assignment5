@@ -192,62 +192,34 @@ a:hover {
     border: 2px solid black;
 }
 
-#articles {
-    grid-area: articles;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1em;
-    align-items: start;
+#tournament-details {
+    grid-area: tournament-details;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#articles figure {
-    width: auto;
-    height: auto;
+#scores-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.match-card {
+    width: 150px;
+    margin: 0.5em;
+    padding: 0.7em;
+    border: 1px solid #2569fc;
+    border-radius: 8px;
+}
+
+.match-card>* {
+    font-size: 0.8em;
     margin: 0;
-    object-fit: contain;
 }
 
-#articles img {
-    width: 100%;
-    object-fit: contain;
-}
-
-#articles a {
-    margin-top: 0.5em;
-    font-size: 14pt;
-    text-decoration: none;
-}
-
-.date-posted {
-    margin: 0;
-    padding: 0;
-    font-size: 8pt;
-    font-style: italic;
-    color: rgba(128, 128, 128, 0.637);
-}
-
-#article1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#article2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#article3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#article4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.match-card>h3+p {
+    margin: 0.4em 0 0;
 }
 
 #footer {
@@ -284,7 +256,7 @@ a:hover {
             "logo"
             "banner"
             "subscribe-form"
-            "articles"
+            "tournament-details"
             "footer";
     }
 
@@ -352,16 +324,12 @@ a:hover {
         margin: 1em 0 1.5em 5%;
     }
 
-    #articles {
-        grid-template-columns: 1fr;
+    #tournament-details {
+        margin: 0 1em;
     }
 
-    #articles a, p {
-        padding: 0 1vh;
-    }
-
-    .date-posted {
-        padding: 0 1vh;
+    .match-card>p {
+        padding: 0;
     }
 }
 
@@ -379,7 +347,7 @@ a:hover {
             ". banner banner banner banner ."
             ". navbar2 navbar2 navbar2 navbar2 ."
             ". subscribe-form subscribe-form subscribe-form subscribe-form ."
-            ". articles articles articles articles ."
+            ". tournament-details tournament-details tournament-details tournament-details ."
             ". footer footer footer footer .";
     }
 
@@ -390,9 +358,34 @@ a:hover {
     #navbar {
         margin-left: 40px;
     }
+
+    #navbar2 button:hover {
+        background-color: rgb(149, 168, 36);
+    }
+
+    #nav2-btn1 {
+        border-bottom-left-radius: 10px;
+    }
+
+    #nav2-btn4 {
+        border-bottom-right-radius: 10px;
+    }
+
+    #banner img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .match-card {
+        width: 200px;
+        margin: 0.6em;
+        padding: 0.7em;
+        border: 1px solid #2569fc;
+        border-radius: 8px;
+    }
 }
 
-@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+@media only screen and (min-width: 1281px) {
     body {
         margin: 1.6em;
         padding: 1.6em;
@@ -407,7 +400,7 @@ a:hover {
             ". navbar banner banner banner banner ."
             ". sidebar navbar2 navbar2 navbar2 navbar2 ."
             ". sidebar subscribe-form subscribe-form subscribe-form subscribe-form ."
-            ". sidebar articles articles articles articles ."
+            ". sidebar tournament-details tournament-details tournament-details tournament-details ."
             ". footer footer footer footer footer .";
     }
 
@@ -448,9 +441,23 @@ a:hover {
     }
 
     #banner img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         height: 100%;
         width: 100%;
         display: block;
         object-fit: cover;
+    }
+
+    #navbar2 button:hover {
+        background-color: rgb(149, 168, 36);
+    }
+
+    #nav2-btn1 {
+        border-bottom-left-radius: 10px;
+    }
+
+    #nav2-btn4 {
+        border-bottom-right-radius: 10px;
     }
 }

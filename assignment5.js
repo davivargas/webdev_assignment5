@@ -42,7 +42,7 @@ app.get("/api/json-scores", function (req, res) {
 app.get("/api/html-standings", (req, res) => {
   try {
     let doc = fs.readFileSync(
-      path.join(__dirname, "./app/data/standings.html"),
+      path.join(__dirname, "./app/data/standings.xml"),
       "utf-8"
     );
     res.send(doc);
