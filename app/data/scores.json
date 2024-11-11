@@ -1,0 +1,84 @@
+{
+  "courses": [
+    {
+      "courseName": "Applied Mathematics",
+      "courseNumber": "COMP 1113",
+      "credits": 4,
+      "days": "Monday, Friday",
+      "location": "SW03",
+      "term": 1
+    },
+    {
+      "courseName": "CST Program Fundamentals",
+      "courseNumber": "COMP 1100",
+      "credits": 1,
+      "days": "Monday",
+      "location": "Online",
+      "term": 1
+    },
+    {
+      "courseName": "Programming Methods",
+      "courseNumber": "COMP 1510",
+      "credits": 7,
+      "days": "Monday-Thursday",
+      "location": "SE12",
+      "term": 1
+    },
+    {
+      "courseName": "Web Development 1",
+      "courseNumber": "COMP 1537",
+      "credits": 4,
+      "days": "Tuesday, Wednesday",
+      "location": "Online",
+      "term": 1
+    },
+    {
+      "courseName": "Projects 1",
+      "courseNumber": "COMP 1800",
+      "credits": 4,
+      "days": "Tuesday, Thursday",
+      "location": "Online",
+      "term": 1
+    },
+    {
+      "courseName": "Business Communications 1",
+      "courseNumber": "COMM 1116",
+      "credits": 4,
+      "days": "Thursday, Friday",
+      "location": "SW03",
+      "term": 1
+    },
+    {
+      "courseName": "Biz Analysis & System Design",
+      "courseNumber": "COMP 1712",
+      "credits": 4,
+      "days": "Thursday, Friday",
+      "location": "SE12",
+      "term": 1
+    },
+    {
+      "courseName": "Procedural Programming",
+      "courseNumber": "COMP 2510",
+      "credits": 5,
+      "days": "N/A",
+      "location": "N/A",
+      "term": 2
+    },
+    {
+      "courseName": "Object Oriented Programming 1",
+      "courseNumber": "COMP 2522",
+      "credits": 5,
+      "days": "N/A",
+      "location": "N/A",
+      "term": 2
+    },
+    {
+      "courseName": "Relational Database Systems",
+      "courseNumber": "COMP 2714",
+      "credits": 5,
+      "days": "N/A",
+      "location": "N/A",
+      "term": 2
+    }
+  ]
+}
