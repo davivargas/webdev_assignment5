@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const scoresContainer = document.getElementById("scores-container");
   const standingsContainer = document.getElementById("standings-container");
 
-  function loadScores() {
+  function loadScores(sport) {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "/api/json-scores", true);
 
@@ -15,17 +15,19 @@ document.addEventListener("DOMContentLoaded", () => {
           scoresContainer.innerHTML = "";
 
           // Create a card for each match
-          data.matches.forEach((match) => {
+          data[sport].forEach((match) => {
             // Create card element
             const card = document.createElement("div");
             card.className = "match-card";
 
             // Populate card content
             card.innerHTML = `
-              <h3>${match.teamA} vs ${match.teamB}</h3>
-              <p><strong>Score:</strong> ${match.scoreA} - ${match.scoreB}</p>
-              <p><strong>Date:</strong> ${match.date}</p>
-              <p><strong>Location:</strong> ${match.location}</p>
+              <div><img src="/img/${sport}-icons/${match.teamA}" class="team-icon"/>
+              <span class="team-score">${match.scoreA}</span>
+               <strong>vs</strong><span class="team-score">${match.scoreB}</span>
+               <img src="/img/${sport}-icons/${match.teamB}" class="team-icon"/></div>
+              <p>${match.date}</p>
+              <p>${match.location}</p>
             `;
 
             // Add card to container
@@ -68,7 +70,27 @@ document.addEventListener("DOMContentLoaded", () => {
     xhr.send();
   }
 
-  console.log("scores loaded");
-  loadScores();
+  function setupSportSelectors() {
+    const sportButtons = Array.from(document.getElementsByClassName("nav2btn"));
+
+    // Add 'active' class to the default sport button
+    document.getElementById("soccer").classList.add("active");
+
+    sportButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Restore background color from all buttons
+        sportButtons.forEach((btn) => btn.classList.remove("active"));
+
+        // Set active background color for the clicked button
+        button.classList.add("active");
+
+        // Load scores for the selected sport
+        loadScores(button.id);
+      });
+    });
+  }
+
+  loadScores("soccer");
   loadStandings();
+  setupSportSelectors();
 });

@@ -38,7 +38,7 @@ app.get("/api/json-scores", function (req, res) {
   }
 });
 
-// serve the standings table as html
+// serve the standings table (for each sport)
 app.get("/api/html-standings", (req, res) => {
   try {
     let doc = fs.readFileSync(

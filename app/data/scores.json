@@ -1,84 +1,330 @@
 {
-  "matches": [
+  "hockey": [
     {
-      "teamA": "Canucks",
-      "teamB": "Oilers",
+      "teamA": "canucks.svg",
+      "teamB": "oilers.svg",
       "scoreA": 3,
       "scoreB": 2,
       "date": "2024-10-10",
       "location": "Rogers Arena"
     },
     {
-      "teamA": "Maple Leafs",
-      "teamB": "Canadiens",
+      "teamA": "maple-leafs.svg",
+      "teamB": "canadiens.svg",
       "scoreA": 1,
       "scoreB": 4,
       "date": "2024-10-11",
       "location": "Bell Centre"
     },
     {
-      "teamA": "Bruins",
-      "teamB": "Rangers",
+      "teamA": "bruins.svg",
+      "teamB": "rangers.svg",
       "scoreA": 5,
       "scoreB": 3,
       "date": "2024-10-12",
       "location": "TD Garden"
     },
     {
-      "teamA": "Penguins",
-      "teamB": "Flyers",
+      "teamA": "penguins.svg",
+      "teamB": "flyers.svg",
       "scoreA": 4,
       "scoreB": 1,
       "date": "2024-10-13",
       "location": "Wells Fargo Center"
     },
     {
-      "teamA": "Blackhawks",
-      "teamB": "Red Wings",
+      "teamA": "blackhawks.svg",
+      "teamB": "redwings.svg",
       "scoreA": 2,
       "scoreB": 3,
       "date": "2024-10-14",
       "location": "United Center"
     },
     {
-      "teamA": "Sharks",
-      "teamB": "Ducks",
+      "teamA": "sharks.svg",
+      "teamB": "ducks.svg",
       "scoreA": 0,
       "scoreB": 2,
       "date": "2024-10-15",
       "location": "Honda Center"
     },
     {
-      "teamA": "Golden Knights",
-      "teamB": "Kings",
+      "teamA": "goldenknights.svg",
+      "teamB": "kings.svg",
       "scoreA": 3,
       "scoreB": 4,
       "date": "2024-10-16",
       "location": "Staples Center"
     },
     {
-      "teamA": "Avalanche",
-      "teamB": "Blues",
+      "teamA": "avalanche.svg",
+      "teamB": "blues.svg",
       "scoreA": 6,
       "scoreB": 4,
       "date": "2024-10-17",
       "location": "Enterprise Center"
     },
     {
-      "teamA": "Capitals",
-      "teamB": "Islanders",
+      "teamA": "capitals.svg",
+      "teamB": "islanders.svg",
       "scoreA": 2,
       "scoreB": 5,
       "date": "2024-10-18",
       "location": "Nassau Coliseum"
     },
     {
-      "teamA": "Predators",
-      "teamB": "Stars",
+      "teamA": "predators.svg",
+      "teamB": "stars.svg",
       "scoreA": 1,
       "scoreB": 3,
       "date": "2024-10-19",
       "location": "American Airlines Center"
+    }
+  ],
+  "soccer": [
+    {
+      "teamA": "flamengo.svg",
+      "teamB": "palmeiras.svg",
+      "scoreA": 1,
+      "scoreB": 1,
+      "date": "2024-10-20",
+      "location": "Maracanã Stadium"
+    },
+    {
+      "teamA": "sao-paulo.svg",
+      "teamB": "corinthians.svg",
+      "scoreA": 3,
+      "scoreB": 3,
+      "date": "2024-10-21",
+      "location": "Morumbi Stadium"
+    },
+    {
+      "teamA": "santos.svg",
+      "teamB": "gremio.svg",
+      "scoreA": 0,
+      "scoreB": 1,
+      "date": "2024-10-22",
+      "location": "Vila Belmiro Stadium"
+    },
+    {
+      "teamA": "internacional.svg",
+      "teamB": "atletico-mineiro.svg",
+      "scoreA": 1,
+      "scoreB": 1,
+      "date": "2024-10-23",
+      "location": "Beira-Rio Stadium"
+    },
+    {
+      "teamA": "botafogo.svg",
+      "teamB": "fluminense.svg",
+      "scoreA": 5,
+      "scoreB": 0,
+      "date": "2024-10-24",
+      "location": "Nilton Santos Stadium"
+    },
+    {
+      "teamA": "cruzeiro.svg",
+      "teamB": "bahia.svg",
+      "scoreA": 3,
+      "scoreB": 0,
+      "date": "2024-10-25",
+      "location": "Mineirão Stadium"
+    },
+    {
+      "teamA": "vasco.svg",
+      "teamB": "fortaleza.svg",
+      "scoreA": 2,
+      "scoreB": 3,
+      "date": "2024-10-26",
+      "location": "São Januário Stadium"
+    },
+    {
+      "teamA": "athletico-pr.svg",
+      "teamB": "goias.svg",
+      "scoreA": 2,
+      "scoreB": 2,
+      "date": "2024-10-27",
+      "location": "Arena da Baixada"
+    },
+    {
+      "teamA": "america-mg.svg",
+      "teamB": "bragantino.svg",
+      "scoreA": 1,
+      "scoreB": 4,
+      "date": "2024-10-28",
+      "location": "Independência Stadium"
+    },
+    {
+      "teamA": "ceara.svg",
+      "teamB": "sport-recife.svg",
+      "scoreA": 3,
+      "scoreB": 2,
+      "date": "2024-10-29",
+      "location": "Castelão Stadium"
+    }
+  ],
+  "basketball": [
+    {
+      "teamA": "lakers.svg",
+      "teamB": "warriors.svg",
+      "scoreA": 102,
+      "scoreB": 99,
+      "date": "2024-11-01",
+      "location": "Staples Center"
+    },
+    {
+      "teamA": "nets.svg",
+      "teamB": "knicks.svg",
+      "scoreA": 98,
+      "scoreB": 105,
+      "date": "2024-11-02",
+      "location": "Madison Square Garden"
+    },
+    {
+      "teamA": "bucks.svg",
+      "teamB": "bulls.svg",
+      "scoreA": 115,
+      "scoreB": 107,
+      "date": "2024-11-03",
+      "location": "Fiserv Forum"
+    },
+    {
+      "teamA": "celtics.svg",
+      "teamB": "76ers.svg",
+      "scoreA": 109,
+      "scoreB": 112,
+      "date": "2024-11-04",
+      "location": "TD Garden"
+    },
+    {
+      "teamA": "heat.svg",
+      "teamB": "hawks.svg",
+      "scoreA": 120,
+      "scoreB": 115,
+      "date": "2024-11-05",
+      "location": "American Airlines Arena"
+    },
+    {
+      "teamA": "suns.svg",
+      "teamB": "mavericks.svg",
+      "scoreA": 101,
+      "scoreB": 99,
+      "date": "2024-11-06",
+      "location": "Talking Stick Resort Arena"
+    },
+    {
+      "teamA": "clippers.svg",
+      "teamB": "nuggets.svg",
+      "scoreA": 99,
+      "scoreB": 102,
+      "date": "2024-11-07",
+      "location": "Ball Arena"
+    },
+    {
+      "teamA": "raptors.svg",
+      "teamB": "pistons.svg",
+      "scoreA": 105,
+      "scoreB": 92,
+      "date": "2024-11-08",
+      "location": "Scotiabank Arena"
+    },
+    {
+      "teamA": "pelicans.svg",
+      "teamB": "grizzlies.svg",
+      "scoreA": 110,
+      "scoreB": 108,
+      "date": "2024-11-09",
+      "location": "Smoothie King Center"
+    },
+    {
+      "teamA": "spurs.svg",
+      "teamB": "rockets.svg",
+      "scoreA": 112,
+      "scoreB": 118,
+      "date": "2024-11-10",
+      "location": "Toyota Center"
+    }
+  ],
+  "football": [
+    {
+      "teamA": "chiefs.svg",
+      "teamB": "eagles.svg",
+      "scoreA": 27,
+      "scoreB": 24,
+      "date": "2024-11-12",
+      "location": "Arrowhead Stadium"
+    },
+    {
+      "teamA": "bills.svg",
+      "teamB": "patriots.svg",
+      "scoreA": 17,
+      "scoreB": 20,
+      "date": "2024-11-13",
+      "location": "Gillette Stadium"
+    },
+    {
+      "teamA": "packers.svg",
+      "teamB": "vikings.svg",
+      "scoreA": 24,
+      "scoreB": 21,
+      "date": "2024-11-14",
+      "location": "Lambeau Field"
+    },
+    {
+      "teamA": "cowboys.svg",
+      "teamB": "giants.svg",
+      "scoreA": 28,
+      "scoreB": 30,
+      "date": "2024-11-15",
+      "location": "AT&T Stadium"
+    },
+    {
+      "teamA": "ravens.svg",
+      "teamB": "steelers.svg",
+      "scoreA": 14,
+      "scoreB": 17,
+      "date": "2024-11-16",
+      "location": "M&T Bank Stadium"
+    },
+    {
+      "teamA": "broncos.svg",
+      "teamB": "chargers.svg",
+      "scoreA": 21,
+      "scoreB": 24,
+      "date": "2024-11-17",
+      "location": "Empower Field at Mile High"
+    },
+    {
+      "teamA": "49ers.svg",
+      "teamB": "seahawks.svg",
+      "scoreA": 31,
+      "scoreB": 28,
+      "date": "2024-11-18",
+      "location": "Levi's Stadium"
+    },
+    {
+      "teamA": "saints.svg",
+      "teamB": "buccaneers.svg",
+      "scoreA": 17,
+      "scoreB": 10,
+      "date": "2024-11-19",
+      "location": "Caesars Superdome"
+    },
+    {
+      "teamA": "raiders.svg",
+      "teamB": "jets.svg",
+      "scoreA": 27,
+      "scoreB": 20,
+      "date": "2024-11-20",
+      "location": "Allegiant Stadium"
+    },
+    {
+      "teamA": "dolphins.svg",
+      "teamB": "bears.svg",
+      "scoreA": 35,
+      "scoreB": 28,
+      "date": "2024-11-21",
+      "location": "Hard Rock Stadium"
     }
   ]
 }
