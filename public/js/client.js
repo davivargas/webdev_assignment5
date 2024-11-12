@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const standingsContainer = document.getElementById("standings-container");
   const bannerContainer = document.getElementById("banner-fig");
   const sports = ["soccer", "hockey", "football", "basketball"];
-  let currentSportDisplayed = sports[0];
+  let currentSportIndex = sports.indexOf("soccer");
+  let currentSportDisplayed = sports[currentSportIndex];
 
   function loadBannerImage(sport) {
     const xhr = new XMLHttpRequest();
@@ -107,33 +108,62 @@ document.addEventListener("DOMContentLoaded", () => {
     xhr.send();
   }
 
-  function setupSportSelectors() {
-    const sports = Array.from(document.getElementsByClassName("nav2btn"));
+  function updateSportDisplay() {
+    currentSportDisplayed = sports[currentSportIndex];
+    loadBannerImage(currentSportDisplayed);
+    loadScores(currentSportDisplayed);
+    loadStandings(currentSportDisplayed);
 
-    // Add 'active' class to the default sport button
+    const activeButton = document.getElementById(currentSportDisplayed);
+    document
+      .querySelectorAll(".nav2btn")
+      .forEach((button) => button.classList.remove("active"));
+    if (activeButton) activeButton.classList.add("active");
+  }
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  bannerContainer.addEventListener("touchstart", (event) => {
+    touchStartX = event.changedTouches[0].screenX;
+  });
+
+  bannerContainer.addEventListener("touchend", (event) => {
+    touchEndX = event.changedTouches[0].screenX;
+    handleSwipeGesture();
+  });
+
+  function handleSwipeGesture() {
+    const swipeDistance = touchEndX - touchStartX;
+    if (swipeDistance > 50) {
+      currentSportIndex =
+        (currentSportIndex - 1 + sports.length) % sports.length;
+      updateSportDisplay();
+    } else if (swipeDistance < -50) {
+      currentSportIndex = (currentSportIndex + 1) % sports.length;
+      updateSportDisplay();
+    }
+  }
+
+  function setupSportSelectors() {
+    const sportsButtons = Array.from(
+      document.getElementsByClassName("nav2btn")
+    );
+
     document.getElementById(currentSportDisplayed).classList.add("active");
 
-    sports.forEach((button) => {
+    sportsButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        // Remove "active" class from all buttons
-        sports.forEach((btn) => btn.classList.remove("active"));
-
-        // Set "active "class for the clicked button
+        sportsButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
 
-        // Load scores for the selected sport if not the current one
-        if (button.id != currentSportDisplayed) {
-          currentSportDisplayed = button.id;
-          loadBannerImage(currentSportDisplayed);
-          loadScores(currentSportDisplayed);
-          loadStandings(currentSportDisplayed);
-        }
+        currentSportDisplayed = button.id;
+        currentSportIndex = sports.indexOf(currentSportDisplayed);
+        updateSportDisplay();
       });
     });
   }
 
-  loadBannerImage(currentSportDisplayed);
-  loadScores(currentSportDisplayed);
-  loadStandings(currentSportDisplayed);
+  updateSportDisplay();
   setupSportSelectors();
 });

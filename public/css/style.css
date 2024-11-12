@@ -279,11 +279,13 @@ a:hover {
     color: #2569fc;
     font-weight: bold;
     font-style: italic;
+    white-space: nowrap;
 }
 
 #standings td {
     background-color: rgba(196, 196, 201, 0.1);
     color: #333;
+    white-space: nowrap;
 }
 
 #standings tr>td:first-child+td+td {
@@ -500,7 +502,7 @@ a:hover {
     #grid-container {
         min-height: 120vh;
         grid-template-columns: 0.2fr repeat(5, 1fr) 0.2fr;
-        grid-template-rows: 0.4fr 0.5fr 35px 0.1fr 2fr 0.2fr;
+        grid-template-rows: 0.1fr 0.5fr 35px 0.1fr 2fr 0.2fr;
         grid-template-areas:
             ". logo banner banner banner banner ."
             ". navbar banner banner banner banner ."
