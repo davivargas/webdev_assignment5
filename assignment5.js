@@ -39,15 +39,17 @@ app.get("/api/json-scores", function (req, res) {
 });
 
 // serve the standings table (for each sport)
-app.get("/api/html-standings", (req, res) => {
+app.get("/api/standings/:sport", (req, res) => {
+  const sport = req.params.sport;
   try {
     let doc = fs.readFileSync(
-      path.join(__dirname, "./app/data/standings.xml"),
+      path.join(__dirname, `./app/data/${sport}.xml`),
       "utf-8"
     );
+    res.setHeader("Content-Type", "application/xml");
     res.send(doc);
   } catch (error) {
-    console.error("Couldn't read standings.html");
+    console.error(`Couldn't read ${sport}.xml`);
     res.status(500).send("Counldn't load standings data");
   }
 });

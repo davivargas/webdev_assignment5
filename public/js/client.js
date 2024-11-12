@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const scoresContainer = document.getElementById("scores-container");
   const standingsContainer = document.getElementById("standings-container");
+  let currentSportDisplayed = "soccer";
 
   function loadScores(sport) {
     const xhr = new XMLHttpRequest();
@@ -52,45 +53,56 @@ document.addEventListener("DOMContentLoaded", () => {
     xhr.send();
   }
 
-  function loadStandings() {
+  function loadStandings(sport) {
     const xhr = new XMLHttpRequest();
 
-    xhr.open("GET", "api/html-standings");
+    xhr.open("GET", `api/standings/${sport}`);
+
     xhr.onload = () => {
       if (xhr.status === 200) {
+        standingsContainer.innerHTML = "";
+        standingsContainer.innerHTML = xhr.responseText;
+
         const data = xhr.responseText;
       } else {
         console.error("Failed to load standings:", xhr.status);
+        standingsContainer.innerHTML = "<p>Couldn't load standings data.</p>";
       }
     };
     xhr.onerror = () => {
       console.error("Network error");
+      standingsContainer.innerHTML =
+        "<p>Network error while loading standings.</p>";
     };
 
     xhr.send();
   }
 
   function setupSportSelectors() {
-    const sportButtons = Array.from(document.getElementsByClassName("nav2btn"));
+    const sports = Array.from(document.getElementsByClassName("nav2btn"));
 
     // Add 'active' class to the default sport button
-    document.getElementById("soccer").classList.add("active");
+    document.getElementById(currentSportDisplayed).classList.add("active");
 
-    sportButtons.forEach((button) => {
+    sports.forEach((button) => {
       button.addEventListener("click", () => {
-        // Restore background color from all buttons
-        sportButtons.forEach((btn) => btn.classList.remove("active"));
+        // Remove "active" class from all buttons
+        sports.forEach((btn) => btn.classList.remove("active"));
 
-        // Set active background color for the clicked button
+        // Set "active "class for the clicked button
         button.classList.add("active");
 
-        // Load scores for the selected sport
-        loadScores(button.id);
+        // Load scores for the selected sport if not the current one
+        if (button.id != currentSportDisplayed) {
+          currentSportDisplayed = button.id;
+          loadScores(currentSportDisplayed);
+          loadStandings(currentSportDisplayed);
+        }
       });
     });
   }
 
-  loadScores("soccer");
-  loadStandings();
+  loadScores(currentSportDisplayed);
+  loadStandings(currentSportDisplayed);
   setupSportSelectors();
 });

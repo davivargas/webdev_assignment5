@@ -99,14 +99,15 @@ a:hover {
 
 #sidebar {
     grid-area: sidebar;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    display: flex;
+    flex-direction: column;
 }
 
 #sidebar section {
     display: flex;
     flex-direction: column;
     margin-right: 1.7em;
+    margin-bottom: 1.5em;
 }
 
 #sidebar section h3 {
@@ -252,6 +253,66 @@ a:hover {
 .team-score {
     font-size: 2.5em;
     font-weight: 600;
+}
+
+#standings-container {
+    max-width: 88vw;
+    overflow-x: auto;
+}
+
+#standings {
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    font-size: 1em;
+    font-family: Inter, sans-serif;
+    overflow: auto;
+}
+
+#standings th, #standings td {
+    padding: 0.6em;
+    text-align: center;
+}
+
+#standings th {
+    background-color: #2569fc49;
+    color: #2569fc;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#standings td {
+    background-color: rgba(196, 196, 201, 0.1);
+    color: #333;
+}
+
+#standings tr>td:first-child+td+td {
+    font-weight: bold;
+}
+
+#standings tr:nth-child(even) td {
+    background-color: rgba(196, 196, 201, 0.30);
+}
+
+#standings tr:hover td {
+    background-color: #7170746c;
+}
+
+#standings .team-name {
+    margin-left: 0.5em;
+}
+
+#standings .team-icon-standings {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
+
+#standings tr>td:first-child+td {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 #footer {
@@ -403,6 +464,14 @@ a:hover {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
+
+    #standings-container {
+        width: 100%;
+    }
+
+    #standings {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 1281px) {
@@ -475,5 +544,13 @@ a:hover {
 
     #basketball {
         border-bottom-right-radius: 10px;
+    }
+
+    #standings-container {
+        width: 80%;
+    }
+
+    #standings {
+        width: 100%;
     }
 }
