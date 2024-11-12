@@ -1,7 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
   const scoresContainer = document.getElementById("scores-container");
   const standingsContainer = document.getElementById("standings-container");
-  let currentSportDisplayed = "soccer";
+  const bannerContainer = document.getElementById("banner-fig");
+  const sports = ["soccer", "hockey", "football", "basketball"];
+  let currentSportDisplayed = sports[0];
+
+  function loadBannerImage(sport) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "/api/json-banners");
+
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        try {
+          const data = JSON.parse(xhr.responseText);
+          data[sport].forEach((banner) => {
+            bannerContainer.innerHTML = "";
+            bannerContainer.innerHTML = `
+                      <img alt="news-banner img" src="/img/banners/${sport}.jpg" />
+                      <figcaption id="banner-figcap">
+                          <p id="b-figcap1">${banner.figcaption1}</p>
+                          <p id="b-figcap2">
+                              ${banner.figcaption2}
+                          </p>
+                      </figcaption>`;
+          });
+        } catch (error) {
+          console.error("Couldn't load banner image.");
+        }
+      } else {
+        console.error("Failed to load banner images:", xhr.status);
+      }
+    };
+
+    xhr.onerror = () => {
+      console.error("Network error while loading banners.");
+    };
+    xhr.send();
+  }
 
   function loadScores(sport) {
     const xhr = new XMLHttpRequest();
@@ -11,17 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (xhr.status === 200) {
         try {
           const data = JSON.parse(xhr.responseText);
-          console.log("Parsed JSON data:", data);
-          // Clear the container
+
           scoresContainer.innerHTML = "";
 
-          // Create a card for each match
           data[sport].forEach((match) => {
-            // Create card element
             const card = document.createElement("div");
             card.className = "match-card";
 
-            // Populate card content
             card.innerHTML = `
               <div><img src="/img/${sport}-icons/${match.teamA}" class="team-icon"/>
               <span class="team-score">${match.scoreA}</span>
@@ -31,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
               <p>${match.location}</p>
             `;
 
-            // Add card to container
             scoresContainer.appendChild(card);
           });
         } catch (error) {
@@ -49,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
       scoresContainer.innerHTML =
         "<p>Network error occurred while loading scores</p>";
     };
-    console.log("opened request");
     xhr.send();
   }
 
@@ -95,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Load scores for the selected sport if not the current one
         if (button.id != currentSportDisplayed) {
           currentSportDisplayed = button.id;
+          loadBannerImage(currentSportDisplayed);
           loadScores(currentSportDisplayed);
           loadStandings(currentSportDisplayed);
         }
@@ -102,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  loadBannerImage(currentSportDisplayed);
   loadScores(currentSportDisplayed);
   loadStandings(currentSportDisplayed);
   setupSportSelectors();

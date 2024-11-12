@@ -303,8 +303,8 @@ a:hover {
 }
 
 #standings .team-icon-standings {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
     margin-right: 0.3em;
 }
@@ -452,17 +452,34 @@ a:hover {
         margin-left: 40px;
     }
 
+    #banner {
+        height: 500px;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    #banner-fig {
+        height: 500px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #banner img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 100%;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
     #soccer {
         border-bottom-left-radius: 10px;
     }
 
     #basketball {
         border-bottom-right-radius: 10px;
-    }
-
-    #banner img {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
     }
 
     #standings-container {
@@ -481,9 +498,9 @@ a:hover {
     }
 
     #grid-container {
-        min-height: 100vh;
+        min-height: 120vh;
         grid-template-columns: 0.2fr repeat(5, 1fr) 0.2fr;
-        grid-template-rows: 0.1fr 0.3fr 35px 0.1fr 0.3fr 0.1fr;
+        grid-template-rows: 0.4fr 0.5fr 35px 0.1fr 2fr 0.2fr;
         grid-template-areas:
             ". logo banner banner banner banner ."
             ". navbar banner banner banner banner ."

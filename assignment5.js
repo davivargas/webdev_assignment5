@@ -23,6 +23,21 @@ app.get("/", function (req, res) {
   res.send(doc);
 });
 
+// serve the banners json file
+app.get("/api/json-banners", function (req, res) {
+  try {
+    let jsonData = fs.readFileSync(
+      path.join(__dirname, "./app/data/banners.json"),
+      "utf-8"
+    );
+    let banners = JSON.parse(jsonData);
+    res.json(banners);
+  } catch (error) {
+    console.error("Couldn't load banners.json");
+    res.status(500).send("Couldn't load banners data");
+  }
+});
+
 // serve the scores json file
 app.get("/api/json-scores", function (req, res) {
   try {

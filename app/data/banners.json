@@ -1,0 +1,27 @@
+{
+    "soccer": [
+    {
+        "figcaption1": "Missed latest brazilian soccer matches?",
+        "figcaption2": "Keep up with the latest scores and take a peek at the standings"
+    }
+    ],
+    "hockey": [
+        {
+            "figcaption1": "Missed latest NHL matches?",
+            "figcaption2": "Keep up with the latest hockey scores and take a peek at the standings"
+        }
+    ],
+    "football": [
+        {
+            "figcaption1": "Missed latest NFL matches?",
+            "figcaption2": "Keep up with the latest football scores and check how your team is doing"
+        }
+    ],
+    "basketball": [
+        {
+            "figcaption1": "Missed latest NBA matches?",
+            "figcaption2": "Keep up with the latest basketball scores and see teams stats"
+        }
+    ]
+  }
+  

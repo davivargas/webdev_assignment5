@@ -1,9 +1,407 @@
-<ul>
-  <li>Monday</li>
-  <li>Tuesday</li>
-  <li>Wednesday</li>
-  <li>Thursday</li>
-  <li>Friday</li>
-  <li>Saturday</li>
-  <li>Sunday</li>
-</ul>
+<table id="standings">
+  <tr>
+    <th>Rank</th>
+    <th>Team</th>
+    <th>W</th>
+    <th>L</th>
+    <th>PCT</th>
+    <th>GB</th>
+    <th>CONF</th>
+    <th>HOME</th>
+    <th>ROAD</th>
+    <th>LAST 10</th>
+    <th>STREAK</th>
+    <th>PF</th>
+    <th>PA</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>
+      <img src="/img/basketball-icons/76ers.svg" class="team-icon-standings" />
+      <span class="team-name">76ers</span>
+    </td>
+    <td>11</td>
+    <td>0</td>
+    <td>100.0</td>
+    <td>0</td>
+    <td>8 - 0</td>
+    <td>6 - 0</td>
+    <td>5 - 0</td>
+    <td>10 - 0</td>
+    <td>W 11</td>
+    <td>122.7</td>
+    <td>110.2</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>
+      <img src="/img/basketball-icons/bucks.svg" class="team-icon-standings" />
+      <span class="team-name">Bucks</span>
+    </td>
+    <td>9</td>
+    <td>2</td>
+    <td>81.8</td>
+    <td>2</td>
+    <td>9 - 1</td>
+    <td>3 - 1</td>
+    <td>6 - 1</td>
+    <td>8 - 2</td>
+    <td>W 2</td>
+    <td>120.2</td>
+    <td>109.6</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>
+      <img
+        src="/img/basketball-icons/celtics.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Celtics</span>
+    </td>
+    <td>5</td>
+    <td>5</td>
+    <td>50.0</td>
+    <td>5.5</td>
+    <td>4 - 4</td>
+    <td>3 - 1</td>
+    <td>2 - 4</td>
+    <td>5 - 5</td>
+    <td>W 1</td>
+    <td>116.2</td>
+    <td>118.8</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>
+      <img src="/img/basketball-icons/heat.svg" class="team-icon-standings" />
+      <span class="team-name">Heat</span>
+    </td>
+    <td>5</td>
+    <td>6</td>
+    <td>45.5</td>
+    <td>6</td>
+    <td>4 - 3</td>
+    <td>4 - 0</td>
+    <td>1 - 6</td>
+    <td>4 - 6</td>
+    <td>W 2</td>
+    <td>108.0</td>
+    <td>106.3</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>
+      <img src="/img/basketball-icons/lakers.svg" class="team-icon-standings" />
+      <span class="team-name">Lakers</span>
+    </td>
+    <td>4</td>
+    <td>5</td>
+    <td>44.4</td>
+    <td>6</td>
+    <td>3 - 2</td>
+    <td>1 - 3</td>
+    <td>2 - 2</td>
+    <td>4 - 5</td>
+    <td>W 1</td>
+    <td>114.4</td>
+    <td>111.2</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>
+      <img
+        src="/img/basketball-icons/nuggets.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Nuggets</span>
+    </td>
+    <td>4</td>
+    <td>6</td>
+    <td>40.0</td>
+    <td>6.5</td>
+    <td>2 - 5</td>
+    <td>3 - 2</td>
+    <td>1 - 4</td>
+    <td>4 - 6</td>
+    <td>L 2</td>
+    <td>111.2</td>
+    <td>112.3</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>
+      <img src="/img/basketball-icons/suns.svg" class="team-icon-standings" />
+      <span class="team-name">Suns</span>
+    </td>
+    <td>4</td>
+    <td>6</td>
+    <td>40.0</td>
+    <td>6.5</td>
+    <td>3 - 1</td>
+    <td>1 - 3</td>
+    <td>3 - 3</td>
+    <td>4 - 6</td>
+    <td>W 1</td>
+    <td>114.8</td>
+    <td>120.3</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>
+      <img
+        src="/img/basketball-icons/warriors.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Warriors</span>
+    </td>
+    <td>4</td>
+    <td>6</td>
+    <td>40.0</td>
+    <td>6.5</td>
+    <td>3 - 5</td>
+    <td>3 - 3</td>
+    <td>1 - 3</td>
+    <td>4 - 6</td>
+    <td>L 1</td>
+    <td>109.5</td>
+    <td>112.5</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>
+      <img
+        src="/img/basketball-icons/clippers.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Clippers</span>
+    </td>
+    <td>4</td>
+    <td>7</td>
+    <td>36.4</td>
+    <td>7</td>
+    <td>3 - 6</td>
+    <td>2 - 4</td>
+    <td>2 - 3</td>
+    <td>4 - 6</td>
+    <td>L 1</td>
+    <td>107.1</td>
+    <td>109.6</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>
+      <img src="/img/basketball-icons/knicks.svg" class="team-icon-standings" />
+      <span class="team-name">Knicks</span>
+    </td>
+    <td>4</td>
+    <td>7</td>
+    <td>36.4</td>
+    <td>7</td>
+    <td>3 - 5</td>
+    <td>3 - 4</td>
+    <td>1 - 3</td>
+    <td>3 - 7</td>
+    <td>W 1</td>
+    <td>116.1</td>
+    <td>121.6</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>
+      <img
+        src="/img/basketball-icons/pistons.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Pistons</span>
+    </td>
+    <td>2</td>
+    <td>6</td>
+    <td>25.0</td>
+    <td>7.5</td>
+    <td>2 - 4</td>
+    <td>1 - 3</td>
+    <td>1 - 2</td>
+    <td>2 - 6</td>
+    <td>L 4</td>
+    <td>110.0</td>
+    <td>123.5</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>
+      <img src="/img/basketball-icons/nets.svg" class="team-icon-standings" />
+      <span class="team-name">Nets</span>
+    </td>
+    <td>2</td>
+    <td>7</td>
+    <td>22.2</td>
+    <td>8</td>
+    <td>2 - 3</td>
+    <td>1 - 4</td>
+    <td>2 - 7</td>
+    <td>4 - 6</td>
+    <td>W 1</td>
+    <td>107.0</td>
+    <td>110.6</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>
+      <img
+        src="/img/basketball-icons/raptors.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Raptors</span>
+    </td>
+    <td>3</td>
+    <td>5</td>
+    <td>37.5</td>
+    <td>6.5</td>
+    <td>3 - 4</td>
+    <td>2 - 3</td>
+    <td>1 - 3</td>
+    <td>4 - 6</td>
+    <td>L 2</td>
+    <td>112.3</td>
+    <td>113.7</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>
+      <img
+        src="/img/basketball-icons/grizzlies.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Grizzlies</span>
+    </td>
+    <td>4</td>
+    <td>5</td>
+    <td>44.4</td>
+    <td>5.5</td>
+    <td>4 - 2</td>
+    <td>1 - 4</td>
+    <td>1 - 3</td>
+    <td>3 - 7</td>
+    <td>W 1</td>
+    <td>116.5</td>
+    <td>111.0</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>
+      <img src="/img/basketball-icons/spurs.svg" class="team-icon-standings" />
+      <span class="team-name">Spurs</span>
+    </td>
+    <td>2</td>
+    <td>9</td>
+    <td>18.2</td>
+    <td>8</td>
+    <td>1 - 3</td>
+    <td>0 - 5</td>
+    <td>2 - 4</td>
+    <td>1 - 9</td>
+    <td>L 3</td>
+    <td>107.3</td>
+    <td>122.9</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>
+      <img src="/img/basketball-icons/bulls.svg" class="team-icon-standings" />
+      <span class="team-name">Bulls</span>
+    </td>
+    <td>3</td>
+    <td>7</td>
+    <td>30.0</td>
+    <td>8.5</td>
+    <td>2 - 5</td>
+    <td>2 - 3</td>
+    <td>1 - 5</td>
+    <td>4 - 6</td>
+    <td>L 2</td>
+    <td>114.0</td>
+    <td>120.8</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>
+      <img
+        src="/img/basketball-icons/mavericks.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Mavericks</span>
+    </td>
+    <td>3</td>
+    <td>6</td>
+    <td>33.3</td>
+    <td>7</td>
+    <td>2 - 3</td>
+    <td>3 - 2</td>
+    <td>1 - 4</td>
+    <td>4 - 6</td>
+    <td>W 2</td>
+    <td>113.7</td>
+    <td>119.2</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>
+      <img
+        src="/img/basketball-icons/pelicans.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Pelicans</span>
+    </td>
+    <td>2</td>
+    <td>7</td>
+    <td>22.2</td>
+    <td>9</td>
+    <td>1 - 6</td>
+    <td>1 - 4</td>
+    <td>1 - 3</td>
+    <td>2 - 8</td>
+    <td>L 3</td>
+    <td>105.3</td>
+    <td>117.5</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>
+      <img
+        src="/img/basketball-icons/rockets.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Rockets</span>
+    </td>
+    <td>3</td>
+    <td>6</td>
+    <td>33.3</td>
+    <td>8</td>
+    <td>2 - 3</td>
+    <td>2 - 2</td>
+    <td>1 - 4</td>
+    <td>4 - 6</td>
+    <td>W 1</td>
+    <td>109.8</td>
+    <td>114.3</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>
+      <img src="/img/basketball-icons/hawks.svg" class="team-icon-standings" />
+      <span class="team-name">Hawks</span>
+    </td>
+    <td>1</td>
+    <td>10</td>
+    <td>9.1</td>
+    <td>9.5</td>
+    <td>0 - 9</td>
+    <td>1 - 9</td>
+    <td>0 - 8</td>
+    <td>1 - 9</td>
+    <td>L 10</td>
+    <td>97.2</td>
+    <td>125.4</td>
+  </tr>
+</table>

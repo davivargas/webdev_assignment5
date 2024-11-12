@@ -1,9 +1,359 @@
-<ul>
-  <li>Monday</li>
-  <li>Tuesday</li>
-  <li>Wednesday</li>
-  <li>Thursday</li>
-  <li>Friday</li>
-  <li>Saturday</li>
-  <li>Sunday</li>
-</ul>
+<table id="standings">
+  <tr>
+    <th>Rank</th>
+    <th>Team</th>
+    <th>PCT</th>
+    <th>PF</th>
+    <th>PA</th>
+    <th>Net Pts</th>
+    <th>Home</th>
+    <th>Road</th>
+    <th>Div</th>
+    <th>Pct</th>
+    <th>Conf</th>
+    <th>Pct</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>
+      <img src="/img/football-icons/eagles.svg" class="team-icon-standings" />
+      <span class="team-name">Eagles</span>
+    </td>
+    <td>1.000</td>
+    <td>219</td>
+    <td>161</td>
+    <td>+58</td>
+    <td>5-0-0</td>
+    <td>4-0-0</td>
+    <td>3-0-0</td>
+    <td>1.000</td>
+    <td>5-0-0</td>
+    <td>1.000</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>
+      <img src="/img/football-icons/bills.svg" class="team-icon-standings" />
+      <span class="team-name">Bills</span>
+    </td>
+    <td>.889</td>
+    <td>284</td>
+    <td>171</td>
+    <td>+113</td>
+    <td>3-1-0</td>
+    <td>5-0-0</td>
+    <td>2-0-0</td>
+    <td>1.000</td>
+    <td>6-1-0</td>
+    <td>.857</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>
+      <img src="/img/football-icons/chiefs.svg" class="team-icon-standings" />
+      <span class="team-name">Chiefs</span>
+    </td>
+    <td>.800</td>
+    <td>290</td>
+    <td>193</td>
+    <td>+97</td>
+    <td>4-0-0</td>
+    <td>4-2-0</td>
+    <td>3-0-0</td>
+    <td>1.000</td>
+    <td>6-2-0</td>
+    <td>.750</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>
+      <img src="/img/football-icons/dolphins.svg" class="team-icon-standings" />
+      <span class="team-name">Dolphins</span>
+    </td>
+    <td>.778</td>
+    <td>221</td>
+    <td>157</td>
+    <td>+64</td>
+    <td>4-1-0</td>
+    <td>3-1-0</td>
+    <td>1-1-0</td>
+    <td>.500</td>
+    <td>3-2-0</td>
+    <td>.600</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>
+      <img src="/img/football-icons/patriots.svg" class="team-icon-standings" />
+      <span class="team-name">Patriots</span>
+    </td>
+    <td>.778</td>
+    <td>233</td>
+    <td>161</td>
+    <td>+72</td>
+    <td>4-1-0</td>
+    <td>4-1-0</td>
+    <td>2-0-0</td>
+    <td>1.000</td>
+    <td>4-2-0</td>
+    <td>.667</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>
+      <img src="/img/football-icons/jets.svg" class="team-icon-standings" />
+      <span class="team-name">Jets</span>
+    </td>
+    <td>.778</td>
+    <td>215</td>
+    <td>146</td>
+    <td>+69</td>
+    <td>3-1-0</td>
+    <td>4-1-0</td>
+    <td>0-0-0</td>
+    <td>1.000</td>
+    <td>4-1-0</td>
+    <td>.800</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>
+      <img src="/img/football-icons/cowboys.svg" class="team-icon-standings" />
+      <span class="team-name">Cowboys</span>
+    </td>
+    <td>.700</td>
+    <td>318</td>
+    <td>253</td>
+    <td>+65</td>
+    <td>4-3-0</td>
+    <td>3-2-0</td>
+    <td>2-1-0</td>
+    <td>.667</td>
+    <td>5-3-0</td>
+    <td>.571</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>
+      <img src="/img/football-icons/49ers.svg" class="team-icon-standings" />
+      <span class="team-name">49ers</span>
+    </td>
+    <td>.700</td>
+    <td>290</td>
+    <td>217</td>
+    <td>+73</td>
+    <td>4-3-0</td>
+    <td>3-2-0</td>
+    <td>2-0-0</td>
+    <td>1.000</td>
+    <td>5-1-0</td>
+    <td>.833</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>
+      <img src="/img/football-icons/giants.svg" class="team-icon-standings" />
+      <span class="team-name">Giants</span>
+    </td>
+    <td>.667</td>
+    <td>230</td>
+    <td>194</td>
+    <td>+36</td>
+    <td>3-2-0</td>
+    <td>3-2-0</td>
+    <td>2-1-0</td>
+    <td>.667</td>
+    <td>4-2-0</td>
+    <td>.667</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>
+      <img src="/img/football-icons/steelers.svg" class="team-icon-standings" />
+      <span class="team-name">Steelers</span>
+    </td>
+    <td>.667</td>
+    <td>186</td>
+    <td>118</td>
+    <td>+68</td>
+    <td>3-1-0</td>
+    <td>3-2-0</td>
+    <td>1-2-0</td>
+    <td>.667</td>
+    <td>4-2-0</td>
+    <td>.667</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>
+      <img src="/img/football-icons/raiders.svg" class="team-icon-standings" />
+      <span class="team-name">Raiders</span>
+    </td>
+    <td>.600</td>
+    <td>238</td>
+    <td>220</td>
+    <td>+18</td>
+    <td>4-2-0</td>
+    <td>2-2-0</td>
+    <td>3-3-0</td>
+    <td>0.500</td>
+    <td>3-3-0</td>
+    <td>.500</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>
+      <img src="/img/football-icons/seahawks.svg" class="team-icon-standings" />
+      <span class="team-name">Seahawks</span>
+    </td>
+    <td>.600</td>
+    <td>238</td>
+    <td>236</td>
+    <td>+2</td>
+    <td>3-3-0</td>
+    <td>4-1-0</td>
+    <td>1-0-0</td>
+    <td>.800</td>
+    <td>6-3-0</td>
+    <td>.750</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>
+      <img src="/img/football-icons/saints.svg" class="team-icon-standings" />
+      <span class="team-name">Saints</span>
+    </td>
+    <td>.500</td>
+    <td>224</td>
+    <td>226</td>
+    <td>-2</td>
+    <td>4-1-0</td>
+    <td>2-3-0</td>
+    <td>3-1-0</td>
+    <td>.750</td>
+    <td>5-1-0</td>
+    <td>.833</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>
+      <img src="/img/football-icons/ravens.svg" class="team-icon-standings" />
+      <span class="team-name">Ravens</span>
+    </td>
+    <td>.556</td>
+    <td>233</td>
+    <td>202</td>
+    <td>+31</td>
+    <td>3-2-0</td>
+    <td>4-2-0</td>
+    <td>1-2-0</td>
+    <td>.333</td>
+    <td>5-3-0</td>
+    <td>.750</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>
+      <img
+        src="/img/football-icons/buccaneers.svg"
+        class="team-icon-standings"
+      />
+      <span class="team-name">Buccaneers</span>
+    </td>
+    <td>.500</td>
+    <td>218</td>
+    <td>230</td>
+    <td>-12</td>
+    <td>3-1-0</td>
+    <td>3-2-0</td>
+    <td>1-2-0</td>
+    <td>.333</td>
+    <td>4-3-0</td>
+    <td>.571</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>
+      <img src="/img/football-icons/packers.svg" class="team-icon-standings" />
+      <span class="team-name">Packers</span>
+    </td>
+    <td>.444</td>
+    <td>210</td>
+    <td>243</td>
+    <td>-33</td>
+    <td>2-3-0</td>
+    <td>2-3-0</td>
+    <td>2-2-0</td>
+    <td>.500</td>
+    <td>3-3-0</td>
+    <td>.500</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>
+      <img src="/img/football-icons/broncos.svg" class="team-icon-standings" />
+      <span class="team-name">Broncos</span>
+    </td>
+    <td>.400</td>
+    <td>202</td>
+    <td>248</td>
+    <td>-46</td>
+    <td>2-4-0</td>
+    <td>2-4-0</td>
+    <td>1-3-0</td>
+    <td>.333</td>
+    <td>3-4-0</td>
+    <td>.429</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>
+      <img src="/img/football-icons/chargers.svg" class="team-icon-standings" />
+      <span class="team-name">Chargers</span>
+    </td>
+    <td>.375</td>
+    <td>213</td>
+    <td>276</td>
+    <td>-63</td>
+    <td>3-3-0</td>
+    <td>2-4-0</td>
+    <td>0-4-0</td>
+    <td>.000</td>
+    <td>2-4-0</td>
+    <td>.333</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>
+      <img src="/img/football-icons/bears.svg" class="team-icon-standings" />
+      <span class="team-name">Bears</span>
+    </td>
+    <td>.333</td>
+    <td>190</td>
+    <td>265</td>
+    <td>-75</td>
+    <td>2-4-0</td>
+    <td>1-4-0</td>
+    <td>2-3-0</td>
+    <td>.400</td>
+    <td>3-5-0</td>
+    <td>.375</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>
+      <img src="/img/football-icons/vikings.svg" class="team-icon-standings" />
+      <span class="team-name">Vikings</span>
+    </td>
+    <td>.300</td>
+    <td>180</td>
+    <td>267</td>
+    <td>-87</td>
+    <td>1-4-0</td>
+    <td>1-5-0</td>
+    <td>1-4-0</td>
+    <td>.200</td>
+    <td>2-6-0</td>
+    <td>.250</td>
+  </tr>
+</table>
