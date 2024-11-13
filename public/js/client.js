@@ -124,9 +124,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  bannerContainer.addEventListener("touchstart", (event) => {
-    touchStartX = event.changedTouches[0].screenX;
-  });
+  bannerContainer.addEventListener(
+    "touchstart",
+    (event) => {
+      touchStartX = event.changedTouches[0].screenX;
+    },
+    { passive: true }
+  );
 
   bannerContainer.addEventListener("touchend", (event) => {
     touchEndX = event.changedTouches[0].screenX;
